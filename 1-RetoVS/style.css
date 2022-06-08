@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-around;
+    place-items: center;
+}
+
+.card-1 {
+    display: flex;
+    width: 250px;
+    height: 300px;
+    flex-direction: column;
+    box-shadow: 0 0 2px 2px rgba(110, 109, 109, 0.39);
+}
+
+.card-1 .top-section, .card-2 .top-section {
+    display: flex;
+    padding: 10px 15px;
+}
+
+.card-1 .top-section .img, .card-2 .top-section .img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background: rgb(224, 98, 98);
+    border-radius: 50%;
+}
+
+.card-1 .info-title h2, .card-2 .info-title h2{
+    font-size: 18px;
+}
+
+.card-1 .info-title p,  .card-2 .info-title p{
+    font-size: 12px;
+    color: gray;
+}
+
+.card-1 .mid-section{
+    height: 50%;
+    background: rgb(224, 98, 98);
+}
+
+.card-2 .mid-section{
+    background: rgb(224, 98, 98);
+}
+
+.card-1 .bottom-section p, .card-2 .bottom-section p {
+    padding: 10px;
+    font-size: 12px;
+    color: gray;
+}
+
+.card-1 .bottom-options,  .card-2 .bottom-options{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.card-1 input, .card-2 input{
+    color: blue;
+    border: none;
+    background: none;
+    margin-right: 15px;
+}
+
+.card-1 span:first-child,  .card-2 span:first-child{
+    margin-right: 15px;
+}
+
+.card-2 {
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "top"
+        "top"
+        "mid"
+        "mid"
+        "mid"
+        "mid"
+        "mid"
+        "bottom"
+        "bottom"
+        "bottom"
+    ;
+    width: 250px;
+    height: 300px;
+    box-shadow: 0 0 2px 2px rgba(110, 109, 109, 0.39);
+}
+
+.card-2 .top-section {
+    grid-area: top;
+}
+
+.card-2 .mid-section {
+    grid-area: mid;
+}
+
+.card-2 .bottom-section {
+    grid-area: bottom;
+}
+
