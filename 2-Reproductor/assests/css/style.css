@@ -1,0 +1,225 @@
+:root {
+    --background: #E6E9F5;
+    --principal-color: #350e64de;
+    --secundary-color: #3d528dde;
+    --buttons-color: #ebeef6e0;
+    --shadown-light-buttons: #7e6de283;
+    --shadown-dark-buttons: #140e217c;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+}
+
+.wrapper {
+    margin: 5vh auto;
+    width: 100vw;
+    max-width: 450px;
+    display: grid;
+    background: var(--background);
+    height: 90vh;
+    grid-template-rows: 1fr 5fr 2fr 2fr;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 4px 4px 8px #000000a1;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: var(--principal-color);
+}
+
+.header h4 {
+    font-size: 1.4rem;
+    color: var(--white);
+    font-weight: bold;
+}
+
+.section-cards {
+    width: 100%;
+    overflow: hidden;
+}
+
+.cards-container {
+    height: calc(100% + 17px);
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.cards-container div {
+    min-width: 170px;
+    min-height: 170px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 15px #00000015,
+        -10px -10px 15px #ffffff80,
+        -5px -5px 10px #ffffff80;
+    margin: 20px;
+    scroll-snap-align: center;
+}
+
+.cards-container div:nth-child(1) {
+    background-image: url('../pictures/BlackInBlack.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cards-container div:nth-child(2) {
+    background-image: url('../pictures/SweaterWeather.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 200px;
+    height: 200px;
+}
+
+.cards-container div:nth-child(3) {
+    background-image: url('../pictures/MolinosDeViento.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.progress-bar {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: end;
+    border-top: 2px solid var(--principal-color);
+    background: var(--secundary-color);
+}
+
+.progress-bar div:first-child h4 {
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 100;
+    padding: 5px;
+}
+
+.progress-bar div:first-child p {
+    text-align: center;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 100;
+    padding: 5px;
+}
+
+.progress-bar div:last-child {
+    display: flex;
+    width: 90%;
+    align-self: center;
+    flex-direction: column;
+}
+
+.time-bar {
+    display: flex;
+    width: 100%;
+}
+
+.time-bar div:first-child {
+    width: 60%;
+    background: var(--principal-color);
+    height: 5px;
+}
+
+.time-bar div:last-child {
+    width: 40%;
+    background: var(--white);
+    height: 5px;
+}
+
+.wrapper .progress-bar .time-numbers {
+    width: 100%;
+}
+
+.progress-bar .time-numbers div {
+    margin-top: 4px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+.buttons {
+    background: var(--principal-color);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.buttons .play {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+    border-radius: 50%;
+}
+
+.buttons .play img {
+    width: 40px;
+}
+
+.buttons div:not(:nth-child(2)) {
+    display: flex;
+    width: 117px;
+    justify-content: space-between;
+}
+
+.buttons div:not(:nth-child(2)) div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: var(--background);
+    border-radius: 50%;
+}
+
+.buttons div:not(:nth-child(2)) div img {
+    width: 30px;
+}
+
+.buttons .options-left .retroceder {
+    margin-right: 4px;
+}
+
+.buttons .options-right .adelantar {
+    margin-left: 4px;
+}
+
+@media (max-width: 450px) {
+    .wrapper {
+        height: 100vh;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .cards-container div {
+        min-width: 45vw;
+        height: 45vw;
+    }
+
+    .cards-container div:nth-child(2) {
+        min-width: 60vw;
+        height: 60vw;
+    }
+}
