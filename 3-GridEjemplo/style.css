@@ -1,0 +1,62 @@
+body {
+    height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: masonry;
+    width: 90vw;
+    background: #000000;
+}
+
+.item-1 {
+    background: yellow;
+    height: 250px;
+}
+
+.item-2 {
+    background: white;
+    height: 100px;
+}
+
+.item-3 {
+    background: green;
+    height: 110px;
+}
+
+.item-4 {
+    background: gray;
+    height: 90px;
+}
+
+.item-5 {
+    background: orangered;
+    height: 100px;
+}
+
+.item-6 {
+    background: brown;
+    height: 250px;
+}
+
+.item-7 {
+    background: pink;
+    height: 90px;
+}
+
+.item-8 {
+    background: purple;
+    height: 260px;
+}
+
+.container div {
+    padding: 20px;
+}
+
+.container div h2 {
+    background: black;
+    color: white;
+    display: inline;
+}
